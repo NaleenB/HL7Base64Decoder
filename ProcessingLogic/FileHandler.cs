@@ -23,7 +23,7 @@ namespace HL7Base64Decoder.ProcessingLogic
 
                     FileInfo fi = new FileInfo(filePath);
 
-                    if (fi.Length > 10 * 1024)
+                    if (fi.Length > 20 * 1024)
                     {
                         throw new Exception(inputFileName + " size larger than allowed 10kb.");
                     }
