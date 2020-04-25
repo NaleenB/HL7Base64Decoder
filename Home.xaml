@@ -1,0 +1,81 @@
+﻿<Window x:Class="HL7Base64Decoder.Home"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:HL7Base64Decoder"
+        mc:Ignorable="d"
+        Title="HL7Base64Decoder - naleen.balalla@health.qld.gov.au" Height="450" Width="600">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="20" />
+            <ColumnDefinition Width="auto" />
+            <ColumnDefinition Width="auto" />
+            <ColumnDefinition Width="auto" />
+            <ColumnDefinition Width="*" />
+            <ColumnDefinition Width="20" />
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="20" />
+            <RowDefinition Height="auto" />
+            <RowDefinition Height="auto" />
+            <RowDefinition Height="auto" />
+            <RowDefinition Height="auto" />
+            <RowDefinition Height="auto" />
+            <RowDefinition Height="auto" />
+            <RowDefinition Height="auto" />
+            <RowDefinition Height="auto" />
+            <RowDefinition Height="auto" />
+            <RowDefinition Height="auto" />
+            <RowDefinition Height="auto" />
+            <RowDefinition Height="*" />
+            <RowDefinition Height="20" />
+        </Grid.RowDefinitions>
+        <!--row #1-->
+        <TextBlock Grid.Row="1" Grid.Column="1" Text="HL7 Debatch Path" Margin="5" />
+        <Label x:Name="lbl_InputPath" Grid.Row="1" Grid.Column="2" MinWidth="300" 
+               Background="LightGray" Margin="5" />
+        <Button Grid.Row="1" Grid.Column="3" x:Name="btn_InputPath" Padding="3"  Margin="5" 
+                Content="Browse" Click="btn_InputPath_Click" />
+
+        <!--row #2-->
+        <TextBlock Grid.Row="2" Grid.Column="1" Text="Base64 Location" Margin="5" />
+        <Label Grid.Row="2" Grid.Column="2" MinWidth="300" 
+               Background="LightGray" Margin="5" Content="OBX-5 WHERE OBX-3-1 == 'IEMR__ORDER__INFO'" />
+
+        <!--row #3-->
+        <TextBlock Grid.Row="3" Grid.Column="2" Text="Base64 location is currently fixed" 
+                   Margin="5" Foreground="Red" />
+        
+        <!--row #5-->
+        <Separator Grid.Row="5" Grid.Column="1" Grid.ColumnSpan="3" />
+        
+        <!--row #6-->
+        <TextBlock Grid.Row="6" Grid.Column="1" Text="File(s) Output Path" Margin="5" />
+        <Label x:Name="lbl_OutputPath" Grid.Row="6" Grid.Column="2" MinWidth="300" 
+               Background="LightGray" Margin="5" />
+        <Button Grid.Row="6" Grid.Column="3" x:Name="btn_OutputPath" Padding="3"  Margin="5" 
+                Content="Browse" Click="btn_OutputPath_Click" />
+
+        <!--row #7-->
+        <TextBlock Grid.Row="7" Grid.Column="1" Text="Save File Name" Margin="5" />
+        <Label Grid.Row="7" Grid.Column="2" MinWidth="300" 
+               Background="LightGray" Margin="5" Content="(MSH-10).pdf" />
+
+        <!--row #8-->
+        <TextBlock Grid.Row="8" Grid.Column="2" Text="Save file name is currently fixed" 
+                   Margin="5" Foreground="Red" />
+
+        <!--row #9-->
+        <Button Grid.Row="9" Grid.Column="2" x:Name="btn_DecodeSave" Padding="3"  Margin="5" 
+                Content="Decode and Save" Click="btn_DecodeSave_Click"  />
+        
+        <!--row #11-->
+        <Separator Grid.Row="11" Grid.Column="1" Grid.ColumnSpan="3" />
+
+        <!--row #12-->
+        <TextBox Background="LightGray" Grid.Row="12" Grid.Column="1" Grid.ColumnSpan="3"  
+                 x:Name="tb_AppOutput" TextWrapping="Wrap" AcceptsReturn="True" 
+                 VerticalScrollBarVisibility="Visible" IsEnabled="False" />
+    </Grid>
+</Window>
